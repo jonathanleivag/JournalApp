@@ -1,0 +1,41 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0px;
+}
+
+%htmlBody {
+    height: 100vh;
+    width: 100vw;
+}
+
+html {
+    @extend %htmlBody;
+}
+
+body {
+    @extend %htmlBody;
+}
+
+main {
+    width: 100%;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mt-5 {
+    margin-top: 20px;
+}
+
+.mb-1 {
+    margin-bottom: 5px;
+}
+
+.mb-5 {
+    margin-bottom: 20px;
+}
+
+.pointer {
+    cursor: pointer;
+}

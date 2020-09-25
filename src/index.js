@@ -1,13 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { JournalApp } from './JournalApp';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { JournalApp } from "./JournalApp";
+import * as serviceWorker from "./serviceWorker";
+import "./style/index";
 
 ReactDOM.render(
   <React.StrictMode>
     <JournalApp />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

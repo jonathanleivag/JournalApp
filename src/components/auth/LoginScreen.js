@@ -22,7 +22,11 @@ export const LoginScreen = () => {
   return (
     <Fragment>
       <h3 className="auth__title">Login</h3>
-      <form autoComplete="off" onSubmit={handlerLogin}>
+      <form
+        autoComplete="off"
+        onSubmit={handlerLogin}
+        className="animate__animated animate__fadeIn animate_faster"
+      >
         <input
           type="text"
           placeholder="Email"

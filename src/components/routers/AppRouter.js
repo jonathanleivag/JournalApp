@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 import { login } from "../../actions/auth";
+import { startLoadingNotes } from "../../actions/notes";
 import { firebase } from "../../firebase/firebaseConfig";
 import { JournalScreen } from "../journal/JournalScreen";
 import { AuthRouter } from "./AuthRouter";
@@ -15,10 +16,11 @@ export const AppRouter = () => {
   const [isLoggendIn, setIsLoggendIn] = useState(false);
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged(async (user) => {
       if (user?.uid) {
         const { uid, displayName } = user;
         dispatch(login(uid, displayName));
+        dispatch(startLoadingNotes(uid));
         setIsLoggendIn(true);
       } else {
         setIsLoggendIn(false);
@@ -28,7 +30,7 @@ export const AppRouter = () => {
     });
   }, [dispatch]);
 
-  if (checking) return <h1>Cargando...</h1>;
+  if (checking) return <h1>Weit...</h1>;
 
   return (
     <Router>

@@ -12,7 +12,7 @@ export const LoginScreen = () => {
 
   const handlerLogin = (e) => {
     e.preventDefault();
-    dispatch(startLogin(email, password));
+    dispatch(startLogin(email, password)); 
   };
 
   const handlerGoogleLogin = () => {

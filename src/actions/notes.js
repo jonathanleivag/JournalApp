@@ -21,7 +21,7 @@ export const startNewNotes = () => {
 export const activeNote = (id, note) => ({
   type: types.notesActive,
   payload: { id, ...note },
-});
+}); 
 
 export const setNotes = (notes) => ({ type: types.notesLoad, payload: notes });
 

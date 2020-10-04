@@ -3,13 +3,13 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC7YgPW_RNEZDHNPHUQfyiwSSeznBMVQWg",
-  authDomain: "react-aprendiendo.firebaseapp.com",
-  databaseURL: "https://react-aprendiendo.firebaseio.com",
-  projectId: "react-aprendiendo",
-  storageBucket: "react-aprendiendo.appspot.com",
-  messagingSenderId: "764066866837",
-  appId: "1:764066866837:web:5b6b5691c7e1f174139d9c",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASEURL,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 
 firebase.initializeApp(firebaseConfig);
